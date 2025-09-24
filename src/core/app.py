@@ -5,7 +5,7 @@ import tkinter as tk
 ROUTES = {
     "Home": Screen.home,
     "Add contact": Screen.add_contact,
-    "Send e-mail": Screen.send_email
+    "Send e-mail": Screen.send_email,
 }
 
 class App:
@@ -14,10 +14,10 @@ class App:
         self.root.title("Gerenciador de contatos")
         self.root.geometry("800x600")
 
-        self.menu = tk.Frame(self.root, bg="#DEDEF1", height=100)
+        self.menu = tk.Frame(self.root, bg=UIComponent.MENU_BG, height=200)
         self.menu.pack(side='top', fill='x')
 
-        self.content = tk.Frame(self.root, bg="#FFFFFF")
+        self.content = tk.Frame(self.root, bg= UIComponent.CONTENT_BG)
         self.content.pack(fill='both', expand=True)
     
     def run(self):

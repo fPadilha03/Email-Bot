@@ -1,5 +1,5 @@
 import tkinter as tk
-from tkinter import ttk
+from ..screens.components import UIComponent
 
 class Screen:
 
@@ -11,15 +11,15 @@ class Screen:
     @staticmethod
     def home(root: tk.Frame):
         Screen.clear(root)
-        ttk.Label(root, text="Gerenciador de contatos", background="white").pack()
+        tk.Label(root, text="Gerenciador de contatos", background=UIComponent.CONTENT_BG, foreground=UIComponent.CONTENT_FG, font=UIComponent.CONTENT_FONT).pack()
     
     @staticmethod
     def add_contact(root: tk.Frame):
         Screen.clear(root)
-        ttk.Label(root, text="Adicionar contato")
+        tk.Label(root, text="Adicionar contato",background=UIComponent.CONTENT_BG, foreground=UIComponent.CONTENT_FG, font=UIComponent.CONTENT_FONT).pack()
 
     
     @staticmethod
     def send_email(root: tk.Frame):
         Screen.clear(root)
-        ttk.Label(root, text="Enviar e-Mail")
+        tk.Label(root, text="Enviar e-Mail",background=UIComponent.CONTENT_BG, foreground=UIComponent.CONTENT_FG, font=UIComponent.CONTENT_FONT).pack()
